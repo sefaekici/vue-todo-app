@@ -15,15 +15,37 @@
 
         <h2>Yapılacaklar Listesi</h2>
         <ul>
-          <li>merhaba</li>
-          <li>merhaba</li>
-          <li>merhaba</li>
-          <li>merhaba</li>
-          <li>merhaba</li>
-          <li>merhaba</li>
-          <li>merhaba</li>
-          <li>merhaba</li>
-          <li>merhaba</li>
+          <li>
+            <span>merhaba</span>
+
+            <div>
+              <i class="fas fa-pen"></i>
+              <i class="far fa-trash-alt"></i>
+            </div>
+            
+          </li>
+
+          <li>
+            <span>merhaba</span>
+
+            <div>
+              <i class="fas fa-pen"></i>
+              <i class="far fa-trash-alt"></i>
+            </div>
+            
+          </li>
+           
+          <li>
+            <span>merhaba</span>
+
+            <div>
+              <i class="fas fa-pen"></i>
+              <i class="far fa-trash-alt"></i>
+            </div>
+            
+          </li>
+
+         
         </ul>
       </div>
 
@@ -53,6 +75,7 @@ html,body{
 
 body{
   background: #ffe2e2;
+  
 }
 
 #app{
@@ -61,13 +84,15 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .todo-app{
   width: 500px;
-  min-height: 600px;
+  height: 600px;
   border-radius: 1rem;
   background: #f6f6f6;
+  overflow:auto;
 }
 
 
@@ -99,6 +124,7 @@ body{
   display: flex;
   flex-direction: column;
   margin-top: 1.5rem;
+ 
 }
 
 .todos h2{
@@ -117,12 +143,26 @@ body{
 }
 
 .todos ul li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 10px;
-  padding: 0.5rem;
-  border: 2px solid #8785a2;
-  border-radius: 10px;
+  padding: 1rem;
+  border: 4px solid #8785a2;
+  background: #ffe2e2;
+  border-radius: 5px;
 }
 
+.todos ul li span{
+  margin-left: 5px;
+}
+
+.todos ul li div i{
+  margin-right:10px;
+}
+.todos ul li div i:hover{
+  opacity: 0.6;
+}
 
 
 
