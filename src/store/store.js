@@ -4,8 +4,14 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
-  state: {},
+  state: {
+    todos: []
+  },
   getters: {},
-  mutations: {},
+  mutations: {
+    addTodos(state, payload) {
+      state.todos.push(payload);
+    }
+  },
   actions: {}
 });

@@ -4,60 +4,24 @@
 
     <div class="todo-app">
 
-      <div class="add-todo">
-        <input class="todoAddInput" type="text">
-        <button class="todoAddButton">+</button>
-      </div>
+     
+    <appAddTodo></appAddTodo>
 
-
-
-      <div class="todos">
-
-        <h2>Yapılacaklar Listesi</h2>
-        <ul>
-          <li>
-            <span>merhaba</span>
-
-            <div>
-              <i class="fas fa-pen"></i>
-              <i class="far fa-trash-alt"></i>
-            </div>
-            
-          </li>
-
-          <li>
-            <span>merhaba</span>
-
-            <div>
-              <i class="fas fa-pen"></i>
-              <i class="far fa-trash-alt"></i>
-            </div>
-            
-          </li>
-           
-          <li>
-            <span>merhaba</span>
-
-            <div>
-              <i class="fas fa-pen"></i>
-              <i class="far fa-trash-alt"></i>
-            </div>
-            
-          </li>
-
-         
-        </ul>
-      </div>
-
+     <appTodos></appTodos>
+     
     </div>
-
 
   </div>
 </template>
 
 <script>
+import AddTodo from "./components/AddTodo";
+import Todos from "./components/Todos";
 export default {
- 
+ components:{
+   appAddTodo:AddTodo,
+   appTodos:Todos,
+ }
 }
 </script>
 
