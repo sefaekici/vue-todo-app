@@ -7,7 +7,11 @@ export const store = new Vuex.Store({
   state: {
     todos: []
   },
-  getters: {},
+  getters: {
+    getTodos(state) {
+      return state.todos;
+    }
+  },
   mutations: {
     addTodos(state, payload) {
       state.todos.push(payload);

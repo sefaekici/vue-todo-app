@@ -4,7 +4,17 @@
         <h2>Yapılacaklar Listesi</h2>
         <ul>
          
-            <appTodo></appTodo>
+            <appTodo>
+                 <li v-for="todo in todos" :key="todo.id">
+                    <span>{{todo.message}}</span>
+
+                    <div>
+                        <i class="fas fa-pen"></i>
+                        <i class="far fa-trash-alt"></i>
+                    </div>
+            
+                </li>
+            </appTodo>
          
         </ul>
       </div>
@@ -16,6 +26,11 @@ import Todo from "./Todo"
 export default {
     components:{
         appTodo:Todo,
+    },
+    computed:{
+        todos(){
+            return this.$store.getters.getTodos;
+        }
     }
 }
 </script>

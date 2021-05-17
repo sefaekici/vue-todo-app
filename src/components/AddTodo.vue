@@ -1,6 +1,6 @@
 <template>
      <div class="add-todo">
-        <input class="todoAddInput" v-model="todo" type="text">
+        <input class="todoAddInput" v-model="todo" type="text" @keyup.enter="addTodo()">
         <button @click="addTodo()" class="todoAddButton">+</button>
       </div>
 </template>
@@ -22,7 +22,6 @@ export default {
             }
             this.todo="",
             this.$store.commit("addTodos",veri);
-            console.log(this.$store.state.todos);
         }
     }
 }
