@@ -1,6 +1,23 @@
-# vue-todo-app
+# Vue.js Todo App
 
-> A Vue.js project
+
+## Ekran Görüntüleri
+![chrome-capture-min](https://user-images.githubusercontent.com/40717655/118625030-50b53480-b7d2-11eb-999a-129cebdd6428.gif)
+
+![1](https://user-images.githubusercontent.com/40717655/118625066-5874d900-b7d2-11eb-9238-dea7504ef731.png)
+
+![2](https://user-images.githubusercontent.com/40717655/118625080-5c086000-b7d2-11eb-9abd-efcafce5d1cf.png)
+
+
+
+
+## Kullanılan Teknolojiler Ve Paketler 
+
+- vuejs 
+- vue router
+- vuex
+- store.js
+
 
 ## Build Setup
 
@@ -15,4 +32,4 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
