@@ -16,12 +16,18 @@ export default {
     },
     methods:{
         addTodo(){
-            const veri={
-                id:uniqId(),
-                message:this.todo,
+
+            if(this.todo==""){
+                alert("Boş todo kaydedilemez...");
             }
-            this.todo="",
-            this.$store.commit("addTodos",veri);
+            else{
+                const veri={
+                    id:uniqId(),
+                    message:this.todo,
+                }
+                this.todo="",
+                this.$store.commit("addTodos",veri);
+            }   
         }
     }
 }

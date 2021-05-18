@@ -9,8 +9,8 @@
                     <span>{{todo.message}}</span>
 
                     <div>
-                        <i class="fas fa-pen"></i>
-                        <i class="far fa-trash-alt"></i>
+                        <i @click="updateTodo(todo)" class="fas fa-pen"></i>
+                        <i @click="deleteTodo(todo.id)" class="far fa-trash-alt"></i>
                     </div>
             
                 </li>
@@ -26,6 +26,20 @@ import Todo from "./Todo"
 export default {
     components:{
         appTodo:Todo,
+    },
+    methods:{
+        deleteTodo(id){
+            const updatedTodos=this.todos.filter((todo)=>{
+               return todo.id!=id;
+            })
+            this.$store.commit("updateTodos",updatedTodos);
+        },
+        updateTodo(todo){
+            const updatedTodos=this.todos.filter((todo)=>{
+               return todo.id!=id;
+            });
+            
+        }
     },
     computed:{
         todos(){

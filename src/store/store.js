@@ -15,6 +15,9 @@ export const store = new Vuex.Store({
   mutations: {
     addTodos(state, payload) {
       state.todos.push(payload);
+    },
+    updateTodos(state, payload) {
+      state.todos = payload;
     }
   },
   actions: {}
