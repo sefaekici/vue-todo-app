@@ -1,5 +1,6 @@
 <template>
     <div>
+      
         <h3 class="headerUpdate">TODOYU GÜNCELLE</h3>
         <div class="update-todo">
             <input class="todoAddInput" v-model="todo" type="text" @keyup.enter="updateTodo()">
@@ -12,7 +13,32 @@
 
 <script>
 export default {
-    
+    data(){
+      return{
+        //router yardımı ile id nin alınması.
+        todoID:this.$route.params.id,
+        todo:"",
+        currentTodo:this.$route.query.todo,
+      }
+      
+    },
+    methods:{
+      updateTodo(){
+        let array=this.$store.getters.getTodos.filter((todo)=>{
+          return todo.id!=this.todoID;
+        });
+        array.push({
+          id:this.todoID,
+          message:this.todo,
+        });
+
+        this.$store.commit("updateTodos",array);
+        this.$router.push("/");
+      },
+    },
+    mounted(){
+      this.todo=this.currentTodo.message;
+    }
 }
 </script>
 
@@ -45,7 +71,8 @@ export default {
 
 .headerUpdate{
     text-align: center;
-    margin-top:1rem;
+    margin-top:1.5rem;
+    margin-bottom:0.5rem  !important;
     font-size: 2rem;
     color: #8785a2;
 }

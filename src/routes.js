@@ -3,5 +3,5 @@ import AddTodo from "./components/AddTodo.vue";
 
 export const routes = [
   { path: "", component: AddTodo },
-  { path: "/edit", component: UpdateTodo }
+  { path: "/edit/:id", component: UpdateTodo }
 ];

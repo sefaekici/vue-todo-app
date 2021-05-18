@@ -9,8 +9,9 @@
                     <span>{{todo.message}}</span>
 
                     <div>
-                        <i @click="updateTodo(todo)" class="fas fa-pen"></i>
-                        <i @click="deleteTodo(todo.id)" class="far fa-trash-alt"></i>
+                        <i @click="redirectUpdateTodo(todo.id,todo)" class="fas fa-pen"></i>
+                        
+                        <i @click="deleteTodo(todo.id,todo)" class="far fa-trash-alt"></i>
                     </div>
             
                 </li>
@@ -24,6 +25,12 @@
 <script>
 import Todo from "./Todo"
 export default {
+    data(){
+        return{
+           
+        }
+    },
+
     components:{
         appTodo:Todo,
     },
@@ -34,10 +41,8 @@ export default {
             })
             this.$store.commit("updateTodos",updatedTodos);
         },
-        updateTodo(todo){
-            const updatedTodos=this.todos.filter((todo)=>{
-               return todo.id!=id;
-            });
+        redirectUpdateTodo(id,todo){
+            this.$router.push({path:"/edit/"+id,query:{todo:todo}});
         }
     },
     computed:{
