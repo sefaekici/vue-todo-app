@@ -15,6 +15,7 @@
 <script>
 import uniqId from "uniqid";
 import Todos from "./Todos";
+import storage from "store";
 export default {
     data(){
         return{
@@ -35,7 +36,10 @@ export default {
                     id:uniqId(),
                     message:this.todo,
                 }
-                this.todo="",
+                this.todo="";
+                let array=storage.get("todos");
+                array.push(veri);
+                storage.set("todos",array);
                 this.$store.commit("addTodos",veri);
             }   
         }

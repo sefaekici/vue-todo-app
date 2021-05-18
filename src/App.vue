@@ -15,10 +15,20 @@
 
 <script>
 import AddTodo from "./components/AddTodo";
+import storage from "store";
 export default {
  components:{
    appAddTodo:AddTodo,
- }
+ },
+ created(){
+   if(storage.get("todos")){
+     this.$store.commit("updateTodos",storage.get("todos"));
+   }
+   else{
+     let array=this.$store.getters.getTodos;
+     storage.set("todos",[...array]);
+   }
+ },
 }
 </script>
 

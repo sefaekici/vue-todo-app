@@ -24,6 +24,7 @@
 
 <script>
 import Todo from "./Todo"
+import storage from "store";
 export default {
     data(){
         return{
@@ -39,6 +40,7 @@ export default {
             const updatedTodos=this.todos.filter((todo)=>{
                return todo.id!=id;
             })
+            storage.set("todos",updatedTodos);
             this.$store.commit("updateTodos",updatedTodos);
         },
         redirectUpdateTodo(id,todo){

@@ -12,6 +12,7 @@
 
 
 <script>
+import storage from "store";
 export default {
     data(){
       return{
@@ -33,6 +34,7 @@ export default {
         });
 
         this.$store.commit("updateTodos",array);
+        storage.set("todos",array);
         this.$router.push("/");
       },
     },
