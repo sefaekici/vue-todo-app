@@ -7,7 +7,7 @@
      
     <appAddTodo></appAddTodo>
 
-     <appTodos></appTodos>
+    <appTodos></appTodos>
      
     </div>
 

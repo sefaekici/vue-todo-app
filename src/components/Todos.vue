@@ -38,7 +38,6 @@ export default {
             const updatedTodos=this.todos.filter((todo)=>{
                return todo.id!=id;
             });
-            
         }
     },
     computed:{
