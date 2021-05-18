@@ -5,9 +5,8 @@
     <div class="todo-app">
 
      
-    <appAddTodo></appAddTodo>
+    <router-view></router-view>
 
-    <appTodos></appTodos>
      
     </div>
 
@@ -16,11 +15,9 @@
 
 <script>
 import AddTodo from "./components/AddTodo";
-import Todos from "./components/Todos";
 export default {
  components:{
    appAddTodo:AddTodo,
-   appTodos:Todos,
  }
 }
 </script>
@@ -35,6 +32,7 @@ export default {
 html,body{
   width: 100%;
   height: 100%;
+   font-family: 'Courier New', Courier, monospace;
 }
 
 body{
@@ -95,6 +93,7 @@ body{
   text-align: center;
   margin-bottom: 1rem;
   color:#8785a2;
+  font-size: 2rem;
 }
 
 .todos ul{

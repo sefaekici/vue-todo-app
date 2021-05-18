@@ -1,18 +1,28 @@
 <template>
-     <div class="add-todo">
-        <input class="todoAddInput" v-model="todo" type="text" @keyup.enter="addTodo()">
-        <button @click="addTodo()" class="todoAddButton">+</button>
-      </div>
+
+    <div>
+        <div class="add-todo">
+             <input class="todoAddInput" v-model="todo" type="text" @keyup.enter="addTodo()">
+             <button @click="addTodo()" class="todoAddButton">+</button>
+        </div>
+
+        <appTodos></appTodos>
+    </div>
+    
 </template>
 
 
 <script>
 import uniqId from "uniqid";
+import Todos from "./Todos";
 export default {
     data(){
         return{
             todo:"",
         }
+    },
+    components:{
+        appTodos:Todos,
     },
     methods:{
         addTodo(){

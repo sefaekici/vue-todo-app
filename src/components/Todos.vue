@@ -1,7 +1,7 @@
 <template>
      <div class="todos">
 
-        <h2>Yapılacaklar Listesi</h2>
+        <h2>YAPILACAKLAR LİSTESİ</h2>
         <ul>
          
             <appTodo>
